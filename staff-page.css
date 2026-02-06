@@ -1,0 +1,127 @@
+.staff-page {
+  .hero-image {
+    object-fit: contain;
+  }
+
+  .main-container {
+    justify-content: unset !important;
+    flex-direction: column;
+    gap: 20px;
+
+    &.no-border-top {
+      border-top: none;
+    }
+  }
+
+  .staff-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    border-top: 1px solid var(--text-color);
+
+    @media (max-width: 1100px) {
+      justify-content: space-between;
+    }
+
+    .staff-item {
+      width: calc((100% - 40px) / 3);
+      border-radius: 10px;
+      box-sizing: border-box;
+      padding: 10px;
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px 1px;
+      display: flex;
+      gap: 20px;
+      min-height: 250px;
+      max-height: 250px;
+
+      @media (max-width: 1100px) {
+        width: calc((100% - 40px) / 2);
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        max-height: unset;
+      }
+
+      .staff-img {
+        width: 35%;
+        height: 100%;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+
+        @media (max-width: 1100px) {
+          width: 50%;
+        }
+      }
+
+      &.dean-space {
+        width: 66%;
+        height: 300px;
+
+        @media (max-width: 1100px) {
+          width: 100%;
+        }
+
+        @media (max-width: 768px) {
+          height: unset;
+        }
+      }
+
+      .staff-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 0;
+        width: 65%;
+
+        @media (max-width: 1100px) {
+          width: 50%;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        h2 {
+          text-transform: capitalize;
+        }
+
+        h3 {
+          margin: 0;
+        }
+
+        .top-content,
+        .bottom-content {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          align-items: flex-start;
+        }
+
+        .staff-title {
+          margin-bottom: 20px;
+
+          &.large {
+            font-size: 1.3em;
+          }
+        }
+
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .lighter-weight {
+    font-weight: normal;
+  }
+}
